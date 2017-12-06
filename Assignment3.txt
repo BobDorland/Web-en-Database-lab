@@ -1,0 +1,145 @@
+1. Node.js
+
+See our code.
+
+
+2. Ajax
+
+See our code.
+
+
+3. Query habit Database
+
+    1.  
+	SELECT * 
+
+	FROM habit_list
+
+	WHERE owner = 1
+
+	id	name	creationDate		owner	isPublic
+	
+	1	Family	2017-09-25 12:35:00	1	0
+	2	Work	2014-02-14 00:00:00	1	0
+				
+				
+				
+     2. 
+	SELECT *
+	
+FROM habit 
+	
+WHERE habit_list_id = 1 
+	
+	id	title		  description   creationDate	habit_list_id	frequency_id	part_of_week_id
+
+	6	Call mom	  null 		 null		1		3		null	
+	13	Visit relatives	  null   	 null		1		3		null
+
+
+     3. 
+	SELECT *
+	
+FROM habit 
+	
+WHERE habit_list_id = 1 
+	
+LIMIT 1
+
+	id	title		  description   creationDate	habit_list_id	frequency_id	part_of_week_id
+
+	6	Call mom	  null 		 null		1		3		null	
+	
+
+     4.  
+
+      a) 
+
+	SELECT * 
+
+	FROM habit
+	
+WHERE frequency_id = 1
+
+	This filters out all the frequencies, which id's are not equal to 1.
+
+
+      b) 
+
+	SELECT habit.*
+
+	FROM habit, habit_list
+	
+WHERE isPublic = 1
+
+	The 'isPublic' field in habit_list uses a logical notation (0/1) for true and false. We use this query to show all habits which are part of a public list.
+
+	c)
+
+	SELECT habit.*
+
+	FROM habit_done, habit
+	
+WHERE timestamp between '2017-10-03 00:20:39' AND '2017-10-17 20:34:04'
+
+	This is a query designed to show all habits which are completed between 2017-10-03 00:20:39 and 2017-10-17 20:34:04
+
+
+     5. 
+
+	SELECT habit.*
+	
+FROM habit, habit_list
+	
+WHERE habit_list.owner = 1 AND habit.habit_list_id = habit_list.id
+
+	
+	id    title   	         description   creationDate   habit_list_id    frequency_id    part_of_week_id
+
+	6     Call mom		   null		null		1		3		null
+	13    Visit relatives	   null		null		1		3		null
+
+
+  
+      6. 
+
+	SELECT day_of_week.*
+	
+FROM day_of_week, habit_day_of_week
+	
+WHERE habit_day_of_week.habit_id = 4 AND habit_day_of_week.day_of_week_id = day_of_week.id
+
+
+	id	name
+
+
+	1	MONDAY
+	3	WEDNESDAY
+	5	FRIDAY
+	6	SATURDAY
+	7	SUNDAY
+
+
+     7. 
+
+	SELECT distinct habit_list.*
+	
+FROM day_of_week, habit_day_of_week, habit, habit_list
+	
+WHERE habit_day_of_week.day_of_week_id = 3 AND habit_day_of_week.habit_id = habit.id AND habit.habit_list_id = habit_list.id
+
+	id	name	        creationDate		owner	isPublic
+
+
+	4	Personal	2014-10-22 00:00:00	2	0
+
+  
+     
+      8.
+
+
+	
+
+	
+	
+						

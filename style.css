@@ -1,0 +1,13 @@
+th:first-child, td:first-child {
+    width: 200px;
+}
+
+th, td {
+    height: 40px;
+    width: 100px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

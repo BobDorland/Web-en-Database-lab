@@ -2,6 +2,8 @@
 
 <head>
 	<title>Dailyhabits</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
 </head>
 
 <body>
@@ -12,15 +14,14 @@
 	<br>
 	<hr>
 
-	<button style="Float:left">+ Add a habit</button>
-	<button style="Float: left">+ Add a goal</button>
-	<button style="Float:left">- Remove a habit</button>
+	<button style="Float:left" onclick="addPrompt()">+ Add a habit</button>
+	<button style="Float:left" onclick="deletePrompt()">- Remove a habit</button>
 	<br>
 	<br>
 
-	<table>
+	<table id="calendar">
 		<tr>
-			<th>Habit</th>
+			<th>Habit name:</th>
 			<th>Mon</th>
 			<th>Tue</th>
 			<th>Wed</th>
@@ -30,14 +31,24 @@
 			<th>Sun</th>
 		</tr>
 		<tr>
-			<td>Habit</td>
-			<td>true</td>
-			<td>false</td>
-			<td>false</td>
-			<td>true</td>
-			<td>true</td>
-			<td>false</td>
-			<td>false</td>
+			<td onclick="editPrompt();">Habit name placeholder</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td onclick="editPrompt();">Habit name placeholder</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 	</table>
 </body>

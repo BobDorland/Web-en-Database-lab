@@ -44,7 +44,7 @@ LAB ASSIGNMENT 2 WEB AND DATABASE
 
 We are planning to add a few classes, these are the following: 
 
-* Habit - abstract class (with title, days)
+* Habit - class (with title, days)
 * PositiveHabit - extends Habit (tile, days) 
 * NegativeHabit - extends Habit (title, days)  
 * HabitList (Array with all habits)

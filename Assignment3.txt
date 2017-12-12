@@ -39,16 +39,18 @@ WHERE habit_list_id = 1
 
      3. 
 	SELECT *
-	
-FROM habit 
+
+	FROM habit 
 	
 WHERE habit_list_id = 1 
+
+	LIMIT 2
 	
-LIMIT 1
+OFFSET 1
 
 	id	title		  description   creationDate	habit_list_id	frequency_id	part_of_week_id
 
-	6	Call mom	  null 		 null		1		3		null	
+	13	Visit relatives	    null	   null                1	     3		   null
 	
 
      4.  
@@ -122,47 +124,36 @@ WHERE habit_day_of_week.habit_id = 4 AND habit_day_of_week.day_of_week_id = day_
 
      7. 
 
-	SELECT DISTINCT habit_list.*
+	SELECT distinct habit_list.*
 	
-FROM habit_day_of_week, habit, habit_list
+FROM habit_day_of_week, habit, habit_list	
 	
-WHERE habit_day_of_week.day_of_week_id = 5 AND habit_day_of_week.habit_id = habit.id
+WHERE habit_day_of_week.day_of_week_id = 1 AND habit_day_of_week.habit_id = habit.id AND habit.habit_list_id = habit_list.id
 
+	id	name	         creationDate		owner	isPublic
 
-	id	name	    creationDate		owner	isPublic
-
-	1	Family	      2017-09-25 12:35:00	1	0
-	2	Work	      2014-02-14 00:00:00	1	0
-	3	Hobby	      2014-09-05 00:00:00	2	1
-	4	Personal      2014-10-22 00:00:00	2	0
-
+	4	Personal	2014-10-22 00:00:00	2	0
   
      
       8.
 
-	SELECT COUNT(DISTINCT habit_done.habit_id) AS completed, (COUNT(DISTINCT habit.id) - COUNT(DISTINCT habit_done.habit_id)) as uncompleted
-
-	FROM habit_day_of_week, habit, habit_done
 	
-WHERE habit_day_of_week.day_of_week_id = 1 AND habit_day_of_week.habit_id = habit.id AND habit.id = habit_done.habit_id
-
-	completed	uncompleted
-
-	3		0
 
 
       9. 
 
 	
-
+	
 
 
       10.
 
-
+	
 
 
       11.
+
+	
 
 
 
@@ -170,14 +161,7 @@ WHERE habit_day_of_week.day_of_week_id = 1 AND habit_day_of_week.habit_id = habi
       12.
 
 
-	SELECT (count(habit_done.habit_id) / count(habit.id)) AS average_completions
-
-	FROM habit, habit_done
-
-	WHERE habit.habit_list_id = 4
-
-	average_completions
-	1.0000
+	
 
 
 
@@ -185,19 +169,7 @@ WHERE habit_day_of_week.day_of_week_id = 1 AND habit_day_of_week.habit_id = habi
       13.
 
 
-	SELECT habit.*
-
-	FROM habit, habit_done
-
-	WHERE habit.habit_list_id = 3
-
-	HAVING count(habit_done.habit_id) > (count(habit_done.habit_id) / count(habit.id))
-
-
-	id    title   	         description   creationDate   habit_list_id    frequency_id    part_of_week_id
-
-	5	Draw		  null		null		3		 2		 null
-		
+	
 	
 	
 						

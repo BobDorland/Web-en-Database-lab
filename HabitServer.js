@@ -15,7 +15,7 @@ server = http.createServer(function(req, res) {                  // creates a we
 });
 
 var port = 2345;                                                 // accepts ports between 1024 and 49151
-server.listen(port);                                             // creates a server that listens on the given port
+server.listen(port);                                             // matches the server with the specified port
 console.log("Server is listening on port" + port);
 
 
@@ -51,7 +51,7 @@ function updateHabitDays(habit, newDays) {                      // updates the d
 
 }
 
-app.get("/habits", function(reg, req) {                          // sends JSON to the client
+app.get(function(reg, req) {                          // sends JSON to the client
 
     res.json(habits);
 

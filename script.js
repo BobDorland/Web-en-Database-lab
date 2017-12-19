@@ -1,5 +1,4 @@
-var habits = [];
-var list = new HabitList(habits);
+document.getElementsByTagName(td)
 
 function addPrompt() {
     window.open("newHabit.html", "Window", "height=500, width=600");
@@ -13,8 +12,17 @@ function editPrompt() {
     window.open("editHabit.html", "Window", "height=500, width=600");
 }
 
+function signupPrompt() {
+    window.open("tracker.html", "_self");
+}
+
+function loginPrompt() {
+    window.open("tracker.html", "_self");
+    
+}
+
 function addForm() {
-    //TODO add Habit to database
+
     window.close();
 }
 

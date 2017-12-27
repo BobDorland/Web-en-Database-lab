@@ -6,43 +6,43 @@ LAB ASSIGNMENT 2 WEB AND DATABASE
   
    - Control: a button ("Add habit")
    - Event: click a button
-   - Event occurs: The user should be able to select certain dates, on which this habit will be planned. And the title of this habit (all in a pop-up), also whether it's a good or bad habit
+   - Event occurs: The user should be able to select certain days, on which this habit will be planned. And the title of this habit (all in a pop-up), also whether it's a good or bad habit
   
 * Delete a habit
 
    - Control: a button ("Delete habit")
    - Event: click a button
-   - Event occurs: The user will get a list of all his current habits in a pop-up. Here the user can select which habits to delete and finally actually delete them. Also the user has to confirm his/her choise.
+   - Event occurs: The user will get a list of all his current habits in a pop-up. Here the user can select which habits to delete and finally actually delete them. 
 
-* Update the status of a habit at a particular time
+* Update the status of a habit at a particular time (CSS for this also)
 
-   - Control: The habit calendar in the habit tracker app page (a field)
-   - Event: click on a certain habit (select a field)
-   - Event occurs: When the users clicks on this field, the field will turn green or red, indicated it has been completed (green for positive habits, red for negative ones.) If the field was already marked as completed and the user presses it again, it will turn white again, marking it as uncompleted
+   - Control: The habit calendar in the habit tracker app page (a day)
+   - Event: click on a certain day
+   - Event occurs: When the user marks a habit as done, it will turn into a green or red color. (positive/negative). When done again, the field becomes white again.
 
 * Change an existing habit's content
 
-   - Control: The habit's name on the left of the days of the week. (little pencil icon) 
-   - Event: click on this little pencil icon
+   - Control: the habit calendar
+   - Event: click on the habit name
    - Event occurs: User will get a pop-up screen where he or she can edit the title, the days on which this habit will be planned. Also change the fact whether it's a good or bad habit.
 
-* Sort the habits according to how well they are meeting the desired goals
+* Sort the habits according to how well they are meeting the desired goals (SQL for this => order by / group by)
 
-    - Control: A drop down menu (different sorting options; Best performance on top (1), Worst performance on top (2), Date of addition(3))
-    - Event: User chooses one of the three options
-    - Event occurs: The order of the habits changes, according to the chosen options. When one is chosen, positive habits which are done the most and negative habits which are done the least, get moved up. When two is chosen, the positive habits done the least and negative habits done the most get moved up. When three is chosen, the oldes habits get moved up.
+    - Control: three different buttons
+    - Event: User clicks one of the three buttons
+    - Event occurs: The order of the habits changes, according to the chosen options. When one is chosen, positive habits which are done the most and negative habits which are done the least, get moved up. When two is chosen, the positive habits done the least and negative habits done the most get moved up. When three is chosen, the oldest habits get moved up.
 
 * Addition of comments to habits (extra)
 
-    - Control: A field in the calendar with habits (A text bubble, which appears when the user hovers over this)
-    - Event: User hovers over this certain field with the mouse and clicks it or not (depending whether the user wants to add comments or not)
-    - Event occurs: When the user hovers over the field, he can see added comments to this habit. When this happens, a little text bubble icon will appear, when this icon is clicked, a pop-up appears, where the user can add comments.
+    - Control: A field in the calendar with habits 
+    - Event: User clicks on a field
+    - Event occurs: When the user clicks a field, he or she can add a comment to that field. It will be displayed after.
 
 
 2) Object-orientated programming:
 
 
-We are planning to add a few classes, these are the following: 
+We will add the following classes, we use the basic constructor design pattern:
 
 * Habit - class (with title, days)
 * PositiveHabit - extends Habit (tile, days) 
@@ -52,12 +52,12 @@ We are planning to add a few classes, these are the following:
 * CommentList (array with comments) 
 * User (User name, HabitList, CommentList)
 
-These are classes which we are planning to make. We think inheritance would be good to apply on the Habit class, because they share many comments, but they treated seperately sometimes. Most things are in classes, because some data has to be fetched often and it's very inconvenient to write SQL queries for each of these fetches.
+We think inheritance would be good to apply on the Habit class, because positive and negative habits share many attributes, but they are treated seperately sometimes. Most things are in classes, because some data has to be fetched often and it's very inconvenient to write SQL queries for each of these fetches.
 
 
 3) Writing Code
 
-See our .js files.
+See our JavaScript files.
 
 
 4) Start my SQL server

@@ -1,23 +1,24 @@
 <html>
-        <head>
-            <title>Edit a habit</title>
-            <script src="script.js"></script>
-        </head>
-        <body>
-            <form name="addHabitForm" method="post" onsubmit="editForm();">
-                <b>Habit name: </b><input type="text" name="fname"><br>
-                <b>Days:</b><br>
-                Mon:<input type="checkbox" name="mon">
-                Tue:<input type="checkbox" name="tue">
-                Wed:<input type="checkbox" name="wed">
-                Thu:<input type="checkbox" name="thu">
-                Fri:<input type="checkbox" name="fri">
-                Sat:<input type="checkbox" name="sat">
-                Sun:<input type="checkbox" name="sun"><br>
-                <input type="radio" name="posneg" value="positive">Positive<br>
-                <input type="radio" name="posneg" value="negative">Negative<br>
-                
-                <input type="submit" value="Edit">
-            </form>
-        </body>
-    </html>
+    <head>
+        <title>Edit a habit</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <form name="addHabitForm" method="post" onsubmit="editHabitForm();">
+            <b>New habit name: </b><input type="text" name="fname"><br><br>
+            <b>New days:</b><br><br>
+            Mon:<input type="checkbox" name="mon">
+            Tue:<input type="checkbox" name="tue">
+            Wed:<input type="checkbox" name="wed">
+            Thu:<input type="checkbox" name="thu">
+            Fri:<input type="checkbox" name="fri">
+            Sat:<input type="checkbox" name="sat">
+            Sun:<input type="checkbox" name="sun"><br><br>
+            <b>Good or bad habit?</b><br><br>
+            <input type="radio" name="posneg" value="positive">Good<br>
+            <input type="radio" name="posneg" value="negative">Bad<br><br>
+            
+            <input type="submit" value="Edit habit">
+        </form>
+    </body>
+</html>

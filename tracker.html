@@ -16,39 +16,42 @@
 
 	<button style="Float:left" onclick="addPrompt()">+ Add a habit</button>
 	<button style="Float:left" onclick="deletePrompt()">- Remove a habit</button>
+	<button style="Float:right" onclick="bestFirst()">Sort best - worst</button>
+	<button style="Float:right" onclick="worstFirst()">Sort worst - best</button>
+	<button style="Float:right" onclick="recentFirst()">Sort most recent - least recent</button>
 	<br>
 	<br>
 
 	<table id="calendar">
 		<tr>
 			<th>Habit name:</th>
-			<th>Mon</th>
-			<th>Tue</th>
-			<th>Wed</th>
-			<th>Thu</th>
-			<th>Fri</th>
-			<th>Sat</th>
-			<th>Sun</th>
+			<th id="completed" onclick="completedPrompt();" >Mon</th>
+			<th id="completed" onclick="completedPrompt();">Tue</th>
+			<th id="completed" onclick="completedPrompt();">Wed</th>
+			<th id="completed" onclick="completedPrompt();">Thu</th>
+			<th id="completed" onclick="completedPrompt();">Fri</th>
+			<th id="completed" onclick="completedPrompt();">Sat</th>
+			<th id="completed" onclick="completedPrompt();">Sun</th>
 		</tr>
 		<tr>
 			<td id="name" onclick="editPrompt();">Habit name placeholder</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
 		</tr>
 		<tr>
 			<td id="name" onclick="editPrompt();">Habit name placeholder</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
+			<td id="comment" onclick="commentPrompt();"></td>
 		</tr>
 	</table>
 </body>
